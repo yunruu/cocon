@@ -64,7 +64,6 @@ const handleClickSave = () => {
 onMounted(() => {
     const localFromCurr = getFromStorage('fromCurrency');
     const localToCurr = getFromStorage('toCurrency');
-    console.log(localFromCurr, localToCurr);
 
     if (localFromCurr) {
         fromCurr.value = localFromCurr;
