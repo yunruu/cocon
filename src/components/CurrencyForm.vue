@@ -12,7 +12,7 @@
                     <img src="../assets/icons/exchange-icon.svg" alt="Exchange arrows" class="w-6 h-6 mt-4" />
                     <div class="flex flex-col w-full">
                         <label for="to" class="text-sm font-semibold">To</label>
-                        <select id="to" v-model="toCurr" class="p-2 border w-full">
+                        <select id="to" v-model="toCurr" class="p-2 border border-gray-300 rounded-md">
                          <option v-for="currency in currencies" :key="currency" :value="currency">{{ getCurrencyDisplay(currency) }}</option>
                         </select>
                     </div>
