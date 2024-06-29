@@ -9,7 +9,9 @@
                             <option v-for="currency in currencies" :key="currency" :value="currency">{{ getCurrencyDisplay(currency) }}</option>
                         </select>
                     </div>
-                    <img src="../assets/icons/exchange-icon.svg" alt="Exchange arrows" class="w-6 h-6 mt-4" />
+                    <button class="mt-4 w-16" @click="handleExchangeCurr">
+                        <img src="../assets/icons/exchange-icon.svg" alt="Exchange arrows" />
+                    </button>
                     <div class="flex flex-col w-full">
                         <label for="to" class="text-sm font-semibold">To</label>
                         <select id="to" v-model="toCurr" class="p-2 border border-gray-300 rounded-md">
@@ -59,6 +61,12 @@ const handleClickSave = () => {
     setTimeout(() => {
         modalData.value.isOpen = false;
     }, 3000);
+}
+
+const handleExchangeCurr = () => {
+    const temp = fromCurr.value;
+    fromCurr.value = toCurr.value;
+    toCurr.value = temp;
 }
 
 onMounted(() => {
