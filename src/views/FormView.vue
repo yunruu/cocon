@@ -1,6 +1,10 @@
 <template>
-    <div class="px-4 py-6 bg-indigo-500">
-        <h1 class="text-2xl font-bold text-indigo-900 mt-4 mb-1 uppercase">Cocon</h1>
+    <div class="flex items-center gap-6 mt-14 ml-6">
+        <img src="../assets/icons/logo.svg" alt="Logo" class="w-16" />
+        <div class="text-3xl font-semibold text-pink-800">
+            <p>Currency</p>
+            <p>Converter</p>
+        </div>
     </div>
     <CurrencyForm />
 </template>
